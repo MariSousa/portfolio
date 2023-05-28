@@ -16,9 +16,9 @@
 .preloader__animacao .animacao__linha {
   display: block;
   position: relative;
-  background: radial-gradient(circle, rgb(33, 1, 104) 0%, rgb(65, 2, 200) 100%);
-  height: 100%;
-  width: 10px;
+  background: radial-gradient(circle, rgb(1, 64, 64) 0%, rgb(2, 115, 94) 100%);
+  height: 80%;
+  width: 8px;
   border-radius: 50px;
   margin: 0 5px;
   animation: musica 1.2s linear infinite;
@@ -58,5 +58,5 @@
 .preloader__escrita {
   font-family: "Fredoka", sans-serif;
   font-size: 3rem;
-  color: #1a1040;
+  color: #014040;
 }

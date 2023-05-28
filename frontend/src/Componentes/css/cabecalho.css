@@ -5,41 +5,27 @@
 .link__logotipo {
   width: 60px;
   border-radius: 100%;
-  box-shadow: 2px 1px 6px 0px #1107266b;
 }
 
 .links__item {
   font-family: "Fredoka";
-  font-size: 1.2rem;
-  color: #110726;
+  font-size: 2.2em;
+  color: #014040;
   padding: 0.5rem 1rem;
   margin: 0 1rem;
   position: relative;
   transition: 0.4s ease;
+  box-sizing: border-box;
 }
 
 .links__item:hover {
-  color: #8610ff !important;
+  color: #02735e !important;
+  cursor: pointer !;
 }
 
-.links__item::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(
-    87deg,
-    rgba(82, 0, 254, 1) 0%,
-    rgba(173, 136, 255, 1) 100%
-  );
-  transition: 1s ease;
-  border-radius: 100px;
-}
-
-.links__item:hover::before {
-  width: 100%;
+.links__item:focus {
+  appearance: none !important;
+  border: 3px solid #014040 !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -74,5 +60,23 @@
     padding: 0.5rem 1rem;
     margin: 0;
     display: inline-block;
+  }
+}
+
+/* acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .links__item:hover::before {
+    width: 0%;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .links__item:hover {
+    color: #4429a6 !important;
+  }
+
+  .links__item:focus {
+    appearance: none !important;
+    border: 2px solid #4429a6 !important;
   }
 }

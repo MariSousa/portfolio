@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 
 //logotipo
-import Logo from "../assets/logo-roxo.png";
+import Logo from "../assets/logo.png";
 
 //react router
 import { Link } from "react-router-dom";
@@ -23,11 +23,14 @@ import Home from "./Home";
 const Cabecalho = () => {
   return (
     <header className="cabecalho">
+      <a href="#conteudoprincipal" className="skip__link">
+        Pular para o conteúdo principal?
+      </a>
       {/* Navbar */}
       <Navbar bg="light" expand="lg" className="cabecalho__navbar">
         <Container className="navbar__container">
           {/* Logotipo */}
-          <Navbar.Brand href="#home" className="container__navbrand">
+          <Navbar.Brand className="container__navbrand">
             <Link to="/" className="navbrand__link">
               <img
                 src={Logo}
@@ -49,23 +52,17 @@ const Cabecalho = () => {
           >
             {/* Menu Links */}
             <Nav className="me-auto collapse__links">
-              <Nav.Link>
-                <Link to="/sobremim" className="links__item">
-                  Sobre mim
-                </Link>
-              </Nav.Link>
+              <Link to="/sobremim" className="links__item">
+                Sobre mim
+              </Link>
 
-              <Nav.Link>
-                <Link to="/projetos" className="links__item">
-                  Projetos
-                </Link>
-              </Nav.Link>
+              <Link to="/projetos" className="links__item">
+                Projetos
+              </Link>
 
-              <Nav.Link>
-                <Link to="/contato" className="links__item">
-                  Contato
-                </Link>
-              </Nav.Link>
+              <Link to="/contato" className="links__item">
+                Contato
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

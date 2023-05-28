@@ -1,10 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+html {
+  font-size: 62.5%;
+}
 
 a {
   text-decoration: none !important;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.secao__container {
+  margin-top: 10em;
+  margin-bottom: 2em;
+}
+
+.skip__link {
+  background-color: #014040;
+  color: white;
+  font-size: 1.2em;
+  padding: 1em 2em;
+  display: inline-block;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  opacity: 0;
+}
+
+.skip__link:focus {
+  opacity: 1;
+}
+
+.paragrafo__introducao {
+  font-family: "Lato";
+  font-size: 1.6em;
+  color: black;
+  letter-spacing: 0.1em;
+}
+
+.titulo__secao {
+  font-family: "Fredoka";
+  font-size: 3.5rem;
+  color: #014040;
+}
+
+.paragrafo__resumo {
+  font-family: "Lato";
+  font-size: 2em;
+  color: #014040;
 }

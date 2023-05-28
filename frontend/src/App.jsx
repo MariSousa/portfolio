@@ -7,6 +7,8 @@ import Cabecalho from "./Componentes/Cabecalho";
 import Home from "./Componentes/Home";
 import Preloader from "./Componentes/Preloader";
 
+import Contexto from "./Contexto";
+
 function App() {
   const [carregando, setCarregando] = React.useState(true);
 
@@ -23,10 +25,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Cabecalho />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <Contexto>
+          <Cabecalho />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Contexto>
       </BrowserRouter>
     </>
   );

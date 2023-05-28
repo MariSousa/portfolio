@@ -1,0 +1,70 @@
+.sobre__mim {
+  display: flex;
+  justify-content: space-between;
+  gap: 20%;
+  flex-wrap: wrap;
+}
+
+.sobre__mim__conteudo,
+.sobre__mim__imagem {
+  width: 40%;
+}
+
+.sobre__mim__conteudo h3 {
+  font-family: "Fredoka";
+  font-size: 3em;
+  color: #014040;
+}
+
+.sobre__mim__conteudo p {
+  font-family: "Lato";
+  font-size: 1.6em;
+  color: #014040;
+}
+
+.sobre__mim__bloco {
+  margin-top: 4em;
+}
+
+.sobre__mim__item {
+  display: flex;
+}
+
+.sobre__mim__info__titulo {
+  width: 100%;
+  max-width: 10em;
+}
+
+.sobre__mim__info__titulo p,
+.sobre__mim__divisor p {
+  color: #014040ca;
+  font-family: "Lato";
+  font-size: 1.6em;
+}
+
+.sobre__mim__divisor {
+  margin: 0 2em;
+}
+
+.sobre__mim__info__texto {
+  margin-left: 2em;
+}
+
+.sobre__mim__info__texto p {
+  font-family: "Fredoka";
+  font-weight: bold;
+  font-size: 1.6em;
+  color: #014040;
+}
+
+.sobre__mim__imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre__mim__imagem img {
+  max-width: 50%;
+  border-radius: 15px;
+  box-shadow: 6px 6px 10px 0 #dbdbdb, -6px -6px 10px #f7f7f7;
+}

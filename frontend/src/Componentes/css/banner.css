@@ -1,4 +1,49 @@
 .container__banner {
   display: grid;
+  gap: 10rem;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.banner__conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.conteudo__apresentacao,
+.conteudo__chamada {
+  font-family: "Lato";
+  font-size: 1.6rem;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.chamada__acao {
+  margin-top: 2em;
+}
+
+.conteudo__titulo {
+  font-family: "Fredoka";
+  font-size: 6em;
+  color: #014040;
+}
+
+.conteudo__resumo {
+  font-family: "Lato";
+  font-size: 2em;
+  color: #014040;
+}
+
+#fourteenthLottie {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  #fourteenthLottie {
+    display: none !important;
+  }
 }

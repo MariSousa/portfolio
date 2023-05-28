@@ -1,0 +1,18 @@
+.botao__padrao {
+  background-color: #f27405;
+  color: black;
+  padding: 1em 3em;
+  border-radius: 5px;
+  font-size: 1.6em;
+  font-family: "Lato";
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+
+.botao__padrao:hover,
+.botao__padrao:focus {
+  background-color: #731702;
+  color: white;
+}
