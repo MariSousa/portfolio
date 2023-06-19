@@ -1,0 +1,53 @@
+.containerPostDetalhe {
+  display: grid;
+  grid-template-columns: 550px 1fr;
+  gap: 50px;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.container__imagemPrincipal {
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container__imagemPrincipal::after {
+  content: "";
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.container__conteudo h2 {
+  font-family: "Fredoka";
+  font-size: 3em;
+  color: #014040;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.container__conteudo p {
+  font-family: "Lato";
+  font-size: 2em;
+  color: #014040;
+}
+
+.container__conteudo a {
+  color: #02735e;
+  transition: 0.4s ease-in-out;
+}
+
+.container__conteudo a:hover {
+  color: #f27405;
+}
+
+@media screen and (max-width: 1070px) {
+  .containerPostDetalhe {
+    display: block !important;
+  }
+
+  .container__imagemPrincipal::after {
+    margin-bottom: 2em;
+  }
+}

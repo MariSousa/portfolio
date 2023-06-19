@@ -8,65 +8,78 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 
+//icones
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import Face4RoundedIcon from "@mui/icons-material/Face4Rounded";
+import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRounded";
+import ContactPageRoundedIcon from "@mui/icons-material/ContactPageRounded";
+
+//css
+import styles from "../Componentes/css/cabecalho.module.css";
+
 //logotipo
 import Logo from "../assets/logo.png";
 
 //react router
-import { Link } from "react-router-dom";
-
-//css
-import "./css/cabecalho.css";
+import { NavLink, useLocation, useMatch, useNavigate } from "react-router-dom";
 
 //links
-import Home from "./Home";
+import useMedia from "../Hooks/useMedia";
 
 const Cabecalho = () => {
+  const mobile = useMedia("(max-width:40rem)");
+  const [mobileMenu, setMobileMenu] = React.useState(false);
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
+
   return (
-    <header className="cabecalho">
+    <header className={`${styles.cabecalho} container`}>
       <a href="#conteudoprincipal" className="skip__link">
         Pular para o conteúdo principal?
       </a>
+      <div className={styles.logotipo}>
+        <NavLink to="/">
+          <img src={Logo} alt="" />
+        </NavLink>
+      </div>
       {/* Navbar */}
-      <Navbar bg="light" expand="lg" className="cabecalho__navbar">
-        <Container className="navbar__container">
-          {/* Logotipo */}
-          <Navbar.Brand className="container__navbrand">
-            <Link to="/" className="navbrand__link">
-              <img
-                src={Logo}
-                alt="Logotipo do portfólio - fundo roxo com as letras M S"
-                className="link__logotipo"
-              />
-            </Link>
-          </Navbar.Brand>
+      <div className={styles.nav__flex}>
+        {mobile && (
+          <buton
+            aria-label="Menu"
+            className={`${styles.mobileButton} ${
+              mobileMenu && styles.mobileButtonActive
+            }`}
+            onClick={() => setMobileMenu(!mobileMenu)}
+          ></buton>
+        )}
 
-          {/* Menu hamburguer */}
-          <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
-            className="container__menuMobile"
-          />
-
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="container__collapse"
-          >
-            {/* Menu Links */}
-            <Nav className="me-auto collapse__links">
-              <Link to="/sobremim" className="links__item">
-                Sobre mim
-              </Link>
-
-              <Link to="/projetos" className="links__item">
-                Projetos
-              </Link>
-
-              <Link to="/contato" className="links__item">
-                Contato
-              </Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+        {/* <nav
+          className={`${mobile ? styles.navMobile : styles.nav} ${
+            mobileMenu && styles.navMobileActive
+          }`}
+        >
+          <NavLink to="/" end>
+            <HomeRoundedIcon />
+            {mobile && "Início"}
+          </NavLink>
+          <NavLink to="/sobremim">
+            <Face4RoundedIcon />
+            {mobile && "Sobre Mim"}
+          </NavLink>
+          <NavLink to="/projetos">
+            <LaptopChromebookRoundedIcon />
+            {mobile && "Projetos"}
+          </NavLink>
+          <NavLink to="/contato">
+            <ContactPageRoundedIcon />
+            {mobile && "Contato"}
+          </NavLink>
+        </nav> */}
+      </div>
     </header>
   );
 };

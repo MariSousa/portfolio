@@ -71,8 +71,30 @@
   font-size: 1.5em;
 }
 
+.conteudo__texto__autor {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+.conteudo__texto__autor p {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato";
+  font-size: 1.2em;
+  color: #014040;
+}
+
+.conteudo__texto__autor img {
+  width: 3%;
+  border-radius: 100%;
+}
+
 .conteudo__texto__resumo {
-  margin-top: 2em;
+  margin-top: 3em;
+  height: 100px;
 }
 
 .conteudo__texto__resumo p {

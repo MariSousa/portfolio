@@ -8,6 +8,7 @@ import Home from "./Componentes/Home";
 import Preloader from "./Componentes/Preloader";
 
 import Contexto from "./Contexto";
+import ProjetosDetalhes from "./Componentes/ProjetosDetalhes";
 
 function App() {
   const [carregando, setCarregando] = React.useState(true);
@@ -29,6 +30,7 @@ function App() {
           <Cabecalho />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/post/:slug" element={<ProjetosDetalhes />} />
           </Routes>
         </Contexto>
       </BrowserRouter>

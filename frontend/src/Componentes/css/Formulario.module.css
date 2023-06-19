@@ -1,0 +1,115 @@
+.formulario {
+  background-color: #014040;
+  color: white;
+  padding: 5em 2em 0 2em;
+  border-radius: 10px;
+}
+
+.container__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid__conteudo h2 {
+  font-family: "Fredoka";
+  font-size: 5em;
+  position: relative;
+  margin-bottom: 0.7em;
+}
+
+.info__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.item__icone svg {
+  width: 25px;
+  height: 25px;
+}
+
+.item__link a {
+  color: white !important;
+  font-family: "Lato";
+  font-size: 1.6em;
+  transition: 0.5s ease-in-out;
+}
+
+.item__link a:hover {
+  color: #f27405 !important;
+}
+
+.rede__social {
+  padding: 50px 0 10px;
+}
+
+.container__linha {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: flex-end;
+}
+
+.container__icones {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+.container__icones .icones__btn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px -5px #aaa;
+  margin: 10px;
+  border-radius: 30%;
+  overflow: hidden;
+  position: relative;
+  color: #02735e;
+  box-sizing: border-box;
+}
+.container__icones .icones__btn i {
+  position: relative;
+  z-index: 4;
+  font-size: 2em;
+  line-height: 3em;
+  transition: 0.3s ease-in-out;
+}
+.container__icones .icones__btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(#02735e, #03a678);
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.container__icones .icones__btn:hover i {
+  color: #fff;
+  transform: scale(1.1);
+}
+.container__icones .icones__btn:hover::before {
+  animation: onHover 0.7s 1;
+  left: -10%;
+  top: -10%;
+}
+@keyframes onHover {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}

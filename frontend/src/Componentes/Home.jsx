@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import Curriculo from "./Curriculo";
 import Projetos from "./Projetos";
+import FomularioContato from "./FomularioContato";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner />
       <Curriculo />
       <Projetos />
+      <FomularioContato />
     </section>
   );
 };
